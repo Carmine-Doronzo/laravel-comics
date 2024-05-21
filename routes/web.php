@@ -19,4 +19,16 @@ Route::get('/', function () {
 
 Route::get('/comics', function () {
     return view('comics');
-});
+})->name('comics');
+
+Route::get('/contact', function () {
+    return view('contacts');
+})->name('contact');
+
+Route::get('/blog', function () {
+    return view('blog');
+})->name('blog');
+
+Route::get('/about', function () {
+    return view('about');
+})->name('about');
