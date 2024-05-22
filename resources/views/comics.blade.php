@@ -1,16 +1,19 @@
 @extends('layouts.app')
 @section('title','comics')
 @section('content')
-@dump($comics)
+<!-- @dump($comics) -->
 <h2>comics</h2>
-<div class="row">
+<ul class="row gy-4 list-unstyled">
     @foreach($comics as $comic)
-    <div class="col-4">
-       <div class="card">
-        <img src="{{$comic['thumb']}}" alt="">
-        <h1>{{$comic['title']}}</h1>
-       </div>
-    </div>
+    <li class="col-3">
+        <div class="card h-100">
+            <img class="w-100 h-75" src="{{$comic['thumb']}}" alt="">
+            <h5>{{$comic['title']}}</h5>
+            <h6>{{$comic['series']}}</h6>
+
+        </div>
+    </li>
     @endforeach
-</div>
+
+</ul>
 @endsection
